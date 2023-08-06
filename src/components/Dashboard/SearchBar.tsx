@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ReactEventHandler } from 'react';
+import React, { ChangeEvent } from 'react';
 
 import { Box, Paper, IconButton, TextField, AutocompleteRenderInputParams } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
@@ -51,9 +51,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchResults, onSearchChange, on
           renderInput={(params: AutocompleteRenderInputParams) => (
             <TextField
               {...params}
+              key={params.id}
               variant="standard"
               sx={{ ml: 1, py: 1 }}
-              placeholder="Search…"
+              placeholder="Search and select an area"
               InputProps={{
                 ...params.InputProps,
                 notched: 'false',

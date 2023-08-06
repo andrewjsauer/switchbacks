@@ -253,7 +253,7 @@ const UserProfile: React.FC<UserProfileProps> = ({ user, onClose, type }) => {
           >
             {isLoading ? 'Loading...' : 'Save Changes'}
           </Button>
-          {user.displayName && photo && (
+          {user.displayName && photo && type === 'WELCOME' && (
             <Button variant="outlined" fullWidth color="secondary" size="large" onClick={onClose}>
               No Changes Needed
             </Button>
